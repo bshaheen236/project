@@ -1,0 +1,29 @@
+body {
+	/* / background-image: url('./image/14.jpeg'); / */
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100px;
+}
+
+.login {
+	padding: 20px;
+	background-color: white;
+	text-align: left;
+	/* width:300px; */
+	height: min-content;
+	border-radius: 10px;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New';
+		
+}
+
+.clr {
+	border-radius: 10px;
+}
+.font{
+	font-family: Times New Roman
+	Georgia
+	Garamond;	
+}
