@@ -15,6 +15,16 @@ function Forgotpass() {
 	const [message, setMessage] = useState("");
 
 	const userValid = async () => {
+		// const res = await fetch(`/forgotpassword/${id}/${token}`, {
+		//     method: "GET",
+		//     headers: {
+		//         "Content-Type": "application/json"
+		//     }
+		// });
+
+		// const res = await forgetpass
+		// api
+		// console.log("ye h password",password)
 		forgotPassword(id, token)
 			.then((result) => {
 				if (result.status === 201) {
@@ -24,6 +34,14 @@ function Forgotpass() {
 				}
 			})
 			.catch((err) => err);
+
+		// const data = await res.json()
+
+		// if (result.status == 201) {
+		//     console.log("user valid")
+		// } else {
+		//     history("*")
+		// }
 	};
 
 	const setval = (e) => {
@@ -42,6 +60,14 @@ function Forgotpass() {
 				position: "top-center",
 			});
 		} else {
+			// const res = await fetch(`/${id}/${token}`, {
+			//     method: "POST",
+			//     headers: {
+			//         "Content-Type": "application/json"
+			//     },
+			//     body: JSON.stringify({ password })
+			// });
+
 			// api
 			await idToken({ id, token, password })
 				.then((result) => {
@@ -56,6 +82,17 @@ function Forgotpass() {
 					}
 				})
 				.catch((err) => err);
+
+			// const data = await res.json()
+
+			// if (data.status == 201) {
+			//     setPassword("")
+			//     setMessage(true)
+			// } else {
+			//     toast.error("! Token Expired generate new LInk", {
+			//         position: "top-center"
+			//     })
+			// }
 		}
 	};
 	useEffect(() => {

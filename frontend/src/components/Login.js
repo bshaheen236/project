@@ -5,18 +5,23 @@ import { Form } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { isLoggedIn, signin, isAdmin } from "../services/loginUser";
 import SignIn from "./googleSignin/SignIn";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./Navbar";
 import "../Login.css";
 
 function Login() {
 	const navigate = useNavigate();
+
+	// const [token,setToken] = useState("")
+	// const [errMsg,setErrMsg]=useState("");
+
 	const [data, setdata] = useState({
 		email: "",
 		password: "",
 	});
 	const [emailErr, setEmailErr] = useState(false);
 	const [passwordErr, setPasswordErr] = useState(false);
-
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setdata({
@@ -52,6 +57,7 @@ function Login() {
 				.then((res) => {
 					if (res.data.statusCode === 200) {
 						successAlert();
+
 						localStorage.setItem("token", res.data.token);
 						isLoggedIn();
 						isAdmin();
@@ -71,10 +77,13 @@ function Login() {
 				<div className=" signup_form_container row">
 					<div className="left col-sm-3">
 						<h1>New User</h1>
+						<p style={{ color: "rgb(221, 191, 58)" }}>
+							Please register first
+						</p>
 
 						<Link to="/SignUp">
-							<button type="button" style={{border:"none",marginTop:"0px"}} className="">
-								Sign Up
+							<button type="button" className="white_btn">
+								Sing Up
 							</button>
 						</Link>
 					</div>
@@ -137,11 +146,11 @@ function Login() {
 
 							<button
 								type="submit"
-								className="green_btn bg-primary"
+								className="green_btn"
 								href="/"
 								onClick={Login}
 							>
-								Login
+								login
 							</button>
 
 							<div className="login throu">

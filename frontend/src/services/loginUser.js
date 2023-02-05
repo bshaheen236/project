@@ -18,7 +18,8 @@ function signin(data) {
 	return axios.post(`${API_URL}signin`, data, { validateStatus: false });
 }
 
-// register
+// regis
+
 function signup(data) {
 	// console.log(data);
 	return axios.post(`${API_URL}signup`, data);
@@ -69,10 +70,6 @@ function idToken(data) {
 function Loginbymail(data) {
 	return axios.post(`${API_URL}loginbymail`, data);
 }
-function varifyOtp(otp) {
-	console.log("kya h ye",otp);
-	return axios.post(`${API_URL}varifyotp`,otp);
-}
 
 export {
 	getUsers,
@@ -88,5 +85,4 @@ export {
 	forgotPassword,
 	idToken,
 	Loginbymail,
-	varifyOtp
 };

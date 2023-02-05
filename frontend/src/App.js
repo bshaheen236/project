@@ -24,7 +24,6 @@ import EmailOtp from "./components/EmailOtp";
 import EmailVarify from "./components/EmailVarify";
 import Sell from "./components/Sell";
 import Buy from "./components/Buy";
-import SellForm from "./components/SellForm";
 // import Kyc from "./components/Kyc"
 
 function ProtectRoute({ children }) {
@@ -50,7 +49,7 @@ function App() {
 					<Route path="/passreset" element={<Passreset />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/emailvarify" element={<EmailVarify />} />
-					<Route path="/trySell" element={<SellForm />} />
+
 					<Route
 						path="/dashboard"
 						element={

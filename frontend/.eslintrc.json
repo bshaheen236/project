@@ -91,7 +91,6 @@
 		"react/react-in-jsx-scope": "off",
 		"no-alert": "off",
 		"react/prop-types": "off",
-		"no-unused-expressions": "off",
-		"radix": false
+		"no-unused-expressions": "off"
 	}
 }
